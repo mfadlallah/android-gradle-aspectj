@@ -24,5 +24,13 @@ allprojects {
             url = uri("https://dl.bintray.com/archinamon/maven")
             isAllowInsecureProtocol = true
         }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/mfadlallah/android-gradle-aspectj")
+            credentials {
+                username = project.findProperty("gpr.username").toString()
+                password = project.findProperty("gpr.token").toString()
+            }
+        }
     }
 }

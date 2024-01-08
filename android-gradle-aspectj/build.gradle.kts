@@ -90,8 +90,8 @@ dependencies {
 
 if (project.hasProperty("user") && project.hasProperty("apiKey")) {
     configure<BintrayExtension> {
-        user = "user"<String>(project.properties)
-        key = "apiKey"<String>(project.properties)
+        user = "gpr.username"<String>(project.properties)
+        key = "gpr.key"<String>(project.properties)
 
         publish = true
 
@@ -99,7 +99,7 @@ if (project.hasProperty("user") && project.hasProperty("apiKey")) {
         pkg.apply {
             repo = "maven"
             name = "android-gradle-aspectj"
-            vcsUrl = "https://github.com/Archinamon/GradleAspectJ-Android"
+            vcsUrl = "https://github.com/mfadlallah/android-gradle-aspectj"
             setLicenses("Apache-2.0")
             version.apply {
                 name = project.version.toString()
